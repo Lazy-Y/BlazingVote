@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (3.4.0)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
   - BFPaperButton (2.0.27):
     - UIColor+BFPaperColors
   - DynamicButton (2.1.0)
@@ -19,6 +22,8 @@ PODS:
   - MMDrawerController/Subclass (0.6.0):
     - MMDrawerController/Core
   - Networking (1.0.1)
+  - OmniCarouselView (0.1.0):
+    - AlamofireImage (~> 2.0)
   - RAMAnimatedTabBarController (1.4.0)
   - RBQFetchedResultsController (4.0.3):
     - Realm (>= 0.99.1)
@@ -41,6 +46,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MMDrawerController
   - Networking
+  - OmniCarouselView
   - RAMAnimatedTabBarController
   - RBQFetchedResultsController
   - SCLAlertView
@@ -50,6 +56,8 @@ DEPENDENCIES:
   - TextFieldEffects
 
 SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   BFPaperButton: 3938d9b1a430dcdbe7f3eb1d17f4d92c67828097
   DynamicButton: 08c809fdee3c4feb34a20beeba64c069a529d176
   DZNEmptyDataSet: d2351b2e8daefa40433ef292e246e21f6be31a7b
@@ -58,6 +66,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Networking: 27736a1bca59b0c767a31006a76d076dd51402bc
+  OmniCarouselView: 8dcd8788d31927663fdae8b218cf3964b51becb5
   RAMAnimatedTabBarController: 6f221d7dc647b4266c9e05618c84b5639f190297
   RBQFetchedResultsController: fcc29d033acb7875af5c85976bd4f1ddb4ff75bc
   Realm: 5254be610db3e5024879684717bf038990bb59ec
@@ -68,6 +77,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
   UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
 
-PODFILE CHECKSUM: d86c5221605625cb869cab30630aa7d12a857bc3
+PODFILE CHECKSUM: 220e4a86b219722b296cc001b380d2e46554acba
 
 COCOAPODS: 1.0.0

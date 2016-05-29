@@ -1,0 +1,6 @@
+framework module OmniCarouselView {
+  umbrella header "OmniCarouselView-umbrella.h"
+
+  export *
+  module * { export * }
+}

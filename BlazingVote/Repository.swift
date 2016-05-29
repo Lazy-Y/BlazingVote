@@ -10,8 +10,18 @@ import Foundation
 
 class Repository: DataSource {
 
-    lazy var items: [Resource] = self.generateResourcesFromDocuments()
+//    lazy var items: [Resource] = self.generateResourcesFromDocuments()
 
+    var items = [Resource]()
+    
+    init(){
+        
+    }
+    
+    init(userID:String){
+        
+    }
+    
     private func generateResourcesFromDocuments() -> [Resource] {
         guard let fileURL = NSBundle.mainBundle()
             .URLForResource(Constant.Filename, withExtension: Constant.Extension) else {
@@ -26,6 +36,8 @@ class Repository: DataSource {
             return Parser.mapElement(dictionary)
         }
     }
+    
+    
 }
 
 extension Repository {

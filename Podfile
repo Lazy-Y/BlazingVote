@@ -15,5 +15,6 @@ pod 'LTMorphingLabel'
 pod 'RAMAnimatedTabBarController'
 pod 'RBQFetchedResultsController'
 pod 'Networking'
+pod 'OmniCarouselView'
 use_frameworks!
 end

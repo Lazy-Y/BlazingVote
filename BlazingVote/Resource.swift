@@ -15,7 +15,7 @@ struct Resource {
 }
 
 extension Resource {
-    var image: UIImage {
+    var image: UIImage? {
         return UIImage.decompressedImageFromImageString(filename)
     }
 }
