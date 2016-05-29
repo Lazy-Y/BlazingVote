@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     func login(){
         SwiftSpinner.show("Loading...")
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(endSpinner), userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(endSpinner), userInfo: nil, repeats: false)
     }
     
     func signup(){

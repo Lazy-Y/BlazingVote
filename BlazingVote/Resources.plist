@@ -8,7 +8,7 @@
 		<key>detail</key>
 		<string>The affable Modernist</string>
 		<key>background</key>
-		<string>background-1</string>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -16,7 +16,7 @@
 		<key>detail</key>
 		<string>The colorful slab serif</string>
 		<key>background</key>
-		<string>background-2</string>
+		<string>2</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -24,7 +24,7 @@
 		<key>detail</key>
 		<string>Articulate meets assertive</string>
 		<key>background</key>
-		<string>background-3</string>
+		<string>3</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -32,7 +32,7 @@
 		<key>detail</key>
 		<string>What letters look like</string>
 		<key>background</key>
-		<string>background-4</string>
+		<string>4</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -40,7 +40,7 @@
 		<key>detail</key>
 		<string>The functional family</string>
 		<key>background</key>
-		<string>background-5</string>
+		<string>5</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -48,7 +48,7 @@
 		<key>detail</key>
 		<string>An architectural letter</string>
 		<key>background</key>
-		<string>background-6</string>
+		<string>6</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -56,7 +56,7 @@
 		<key>detail</key>
 		<string>Spirited, subtle, ferocious</string>
 		<key>background</key>
-		<string>background-7</string>
+		<string>7</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -64,7 +64,7 @@
 		<key>detail</key>
 		<string>Dark and mysterious, eloquent and bright</string>
 		<key>background</key>
-		<string>background-8</string>
+		<string>8</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -72,7 +72,7 @@
 		<key>detail</key>
 		<string>A true renaissance letter</string>
 		<key>background</key>
-		<string>background-9</string>
+		<string>9</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -80,7 +80,7 @@
 		<key>detail</key>
 		<string>The slab serif that works</string>
 		<key>background</key>
-		<string>background-10</string>
+		<string>10</string>
 	</dict>
 </array>
 </plist>

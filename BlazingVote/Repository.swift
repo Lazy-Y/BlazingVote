@@ -10,9 +10,9 @@ import Foundation
 
 class Repository: DataSource {
 
-//    lazy var items: [Resource] = self.generateResourcesFromDocuments()
+    lazy var items: [Resource] = self.generateResourcesFromDocuments()
 
-    var items = [Resource]()
+//    var items = [Resource]()
     
     init(){
         
