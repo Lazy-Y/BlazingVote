@@ -34,6 +34,9 @@
 		BAB452341CED12EF00346746 /* LeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB452331CED12EF00346746 /* LeftController.swift */; };
 		BAB452361CED134800346746 /* RightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB452351CED134800346746 /* RightController.swift */; };
 		CA86F11889DFCB4BC17A5BA6 /* Pods_BlazingVote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B1FC55E3D551B92F6168DA /* Pods_BlazingVote.framework */; };
+		FD0F0D381D04A88F00BFB03E /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F0D371D04A88F00BFB03E /* PostController.swift */; };
+		FD0F0D3A1D04B0B500BFB03E /* TagsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F0D391D04B0B500BFB03E /* TagsController.swift */; };
+		FD437F111D015A4D003C10A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD437F101D015A4D003C10A3 /* GoogleService-Info.plist */; };
 		FDFA7C451CFB8543008E7F64 /* Images.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFA7C441CFB8543008E7F64 /* Images.xib */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		BAB4522F1CED095200346746 /* LLSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSwitch.m; sourceTree = "<group>"; };
 		BAB452331CED12EF00346746 /* LeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftController.swift; sourceTree = "<group>"; };
 		BAB452351CED134800346746 /* RightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightController.swift; sourceTree = "<group>"; };
+		FD0F0D371D04A88F00BFB03E /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		FD0F0D391D04B0B500BFB03E /* TagsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsController.swift; sourceTree = "<group>"; };
+		FD437F101D015A4D003C10A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDFA7C441CFB8543008E7F64 /* Images.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Images.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,8 @@
 				BAB452331CED12EF00346746 /* LeftController.swift */,
 				BA99C2041CED9CDC0085DD04 /* QuestionController.swift */,
 				BA99C2061CED9E5A0085DD04 /* CollectionController.swift */,
+				FD0F0D371D04A88F00BFB03E /* PostController.swift */,
+				FD0F0D391D04B0B500BFB03E /* TagsController.swift */,
 				BA99C2141CEDB39A0085DD04 /* Flowlayout */,
 				BAB4520E1CED077800346746 /* Assets.xcassets */,
 				BA99C2211CEDB4B50085DD04 /* Images.xcassets */,
@@ -151,6 +159,7 @@
 				BAB4520B1CED077800346746 /* Main.storyboard */,
 				BAB452101CED077800346746 /* LaunchScreen.storyboard */,
 				BAB452131CED077800346746 /* Info.plist */,
+				FD437F101D015A4D003C10A3 /* GoogleService-Info.plist */,
 				BAB452191CED078300346746 /* BlazingVote-Bridging-Header.h */,
 				BAB452291CED095200346746 /* LLSwitch */,
 			);
@@ -241,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFA7C451CFB8543008E7F64 /* Images.xib in Resources */,
+				FD437F111D015A4D003C10A3 /* GoogleService-Info.plist in Resources */,
 				BA99C2241CEDB5310085DD04 /* Resources.plist in Resources */,
 				BAB452121CED077800346746 /* LaunchScreen.storyboard in Resources */,
 				BA99C2221CEDB4B50085DD04 /* Images.xcassets in Resources */,
@@ -316,6 +326,7 @@
 				BAB4520A1CED077800346746 /* ViewController.swift in Sources */,
 				BA99C21A1CEDB4270085DD04 /* Resource.swift in Sources */,
 				BA99C20E1CEDB36E0085DD04 /* UIImage+Extended.swift in Sources */,
+				FD0F0D381D04A88F00BFB03E /* PostController.swift in Sources */,
 				BA99C20F1CEDB36E0085DD04 /* ReusableView.swift in Sources */,
 				BA99C21E1CEDB43C0085DD04 /* Parser.swift in Sources */,
 				BAB452301CED095200346746 /* LLAnimationManager.m in Sources */,
@@ -324,6 +335,7 @@
 				BA99C2191CEDB4270085DD04 /* Renderer.swift in Sources */,
 				BA99C2071CED9E5A0085DD04 /* CollectionController.swift in Sources */,
 				BA99C20A1CEDB34D0085DD04 /* CollectionViewCell.swift in Sources */,
+				FD0F0D3A1D04B0B500BFB03E /* TagsController.swift in Sources */,
 				BA99C21D1CEDB43C0085DD04 /* Mapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

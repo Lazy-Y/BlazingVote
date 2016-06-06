@@ -8,11 +8,20 @@
 
 import UIKit
 import BFPaperButton
+import Firebase
 
 class RightController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func logoutAction(){
-        dismissViewControllerAnimated(false, completion: nil)
+        try! FIRAuth.auth()?.signOut()
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let vc = getLoginVC()
+        if delegate.window?.rootViewController == vc{
+            dismissViewControllerAnimated(false, completion: nil)
+        }
+        else {
+            delegate.window?.rootViewController = vc
+        }
     }
     
     var funcArr = ["Edit Profile", "Setting", "Description", "Team Info"]

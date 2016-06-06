@@ -1,4 +1,3 @@
-
 //
 //  SignupController.swift
 //  BlazingVote
@@ -12,6 +11,7 @@ import TextFieldEffects
 import DynamicButton
 import LTMorphingLabel
 import BFPaperButton
+import Firebase
 
 class SignupController: UIViewController, LLSwitchDelegate {
     
@@ -19,6 +19,9 @@ class SignupController: UIViewController, LLSwitchDelegate {
     var genderLabel:LTMorphingLabel!
     var genderSwitch:LLSwitch!
     var confirmButton:BFPaperButton!
+    let usernameField = KaedeTextField()
+    let passwordField = KaedeTextField()
+    let emailField = KaedeTextField()
     
     func back(){
         dismissViewControllerAnimated(true, completion: nil)
@@ -56,13 +59,10 @@ class SignupController: UIViewController, LLSwitchDelegate {
             .heightIs(21)
         // Do any additional setup after loading the view.
         
-        let usernameField = KaedeTextField()
         usernameField.setup("Username", top: title, parent: view)
         
-        let passwordField = KaedeTextField()
         passwordField.setup("Password", top: usernameField, parent: view)
         
-        let emailField = KaedeTextField()
         emailField.setup("Email", top: passwordField, parent: view)
         
         let birthLabel = UILabel()
@@ -110,6 +110,23 @@ class SignupController: UIViewController, LLSwitchDelegate {
         
         confirmButton = BFPaperButton(raised: true)
         confirmButton.setup("Confirm", top: genderLabel, parent: view)
+        confirmButton.addTarget(self, action: #selector(signupAction), forControlEvents: .TouchUpInside)
+    }
+    
+    func signupAction(){
+        FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!, completion: { (user, error) in
+            if let user = user{
+                user.sendEmailVerificationWithCompletion({ (error) in
+                    print(error?.localizedDescription)
+                })
+                self.dismissViewControllerAnimated(true, completion: {
+                    loginVC.showMainView()
+                })
+            }
+            else {
+                print("Invalid user")
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {

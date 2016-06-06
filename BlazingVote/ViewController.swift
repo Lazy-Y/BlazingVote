@@ -19,14 +19,45 @@ import DynamicButton
 import SDAutoLayout
 import BFPaperButton
 import LTMorphingLabel
+import Firebase
 
-var drawer:MMDrawerController!
+var drawer:MMDrawerController{
+    let board = UIStoryboard(name: "Main", bundle: nil)
+    let left = board.instantiateViewControllerWithIdentifier("left")
+    let center = board.instantiateViewControllerWithIdentifier("center") as! UINavigationController
+    let right = board.instantiateViewControllerWithIdentifier("right")
+    let tabbar = center.childViewControllers.first
+    tabbar?.navigationController?.navigationBarHidden = true
+    
+    let vc = MMDrawerController(centerViewController: center, leftDrawerViewController: left, rightDrawerViewController: right)
+    vc.openDrawerGestureModeMask = .PanningCenterView
+    vc.closeDrawerGestureModeMask = .PanningCenterView
+    return vc
+}
+internal var loginVC:ViewController!
+func getLoginVC()->ViewController{
+    if let vc = loginVC {
+        return vc
+    }
+    else {
+        let board = UIStoryboard(name: "Main", bundle: nil)
+        let vc = board.instantiateViewControllerWithIdentifier("first")
+        return vc as! ViewController
+    }
+}
 
 class ViewController: UIViewController {
+    
+    let loginButton = BFPaperButton(raised: true)
+    let signupButton = BFPaperButton(raised: true)
+    
+    let usernameField = KaedeTextField()
+    let passwordField = KaedeTextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginVC = self
         titleLabel = LTMorphingLabel()
         titleLabel.text = "Blazing Vote"
         view.addSubview(titleLabel)
@@ -38,14 +69,8 @@ class ViewController: UIViewController {
             .heightIs(21)
         titleLabel.morphingEffect = .Sparkle
         
-        let usernameField = KaedeTextField()
-        let passwordField = KaedeTextField()
-        
         usernameField.setup("Username", top: titleLabel, parent: view)
         passwordField.setup("Password", top: usernameField, parent: view)
-        
-        let loginButton = BFPaperButton(raised: true)
-        let signupButton = BFPaperButton(raised: true)
 
         loginButton.setup("Login", top: passwordField, parent: view)
         signupButton.setup("Signup", top: loginButton, parent: view)
@@ -72,19 +97,19 @@ class ViewController: UIViewController {
         titleLabel.text = titleArr[titleState]
     }
     
-    func endSpinner(){
-        SwiftSpinner.hide()
-        let board = UIStoryboard(name: "Main", bundle: nil)
-        let left = board.instantiateViewControllerWithIdentifier("left")
-        let center = board.instantiateViewControllerWithIdentifier("center") as! UINavigationController
-        let right = board.instantiateViewControllerWithIdentifier("right")
-        let tabbar = center.childViewControllers.first
-        tabbar?.navigationController?.navigationBarHidden = true
-        
-        drawer = MMDrawerController(centerViewController: center, leftDrawerViewController: left, rightDrawerViewController: right)
-        drawer.openDrawerGestureModeMask = .PanningCenterView
-        drawer.closeDrawerGestureModeMask = .PanningCenterView
+    func showMainView(){
         showViewController(drawer, sender: self)
+    }
+    
+    func endSpinner(){
+        
+        FIRAuth.auth()?.signInWithEmail(usernameField.text!, password: passwordField.text!, completion: nil)
+        FIRAuth.auth()?.signInWithEmail(usernameField.text!, password: passwordField.text!, completion: { (user, err) in
+            SwiftSpinner.hide()
+            if let _ = user{
+                self.showMainView()
+            }
+        })
     }
     
     func login(){

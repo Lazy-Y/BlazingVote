@@ -16,5 +16,8 @@ pod 'RAMAnimatedTabBarController'
 pod 'RBQFetchedResultsController'
 pod 'Networking'
 pod 'OmniCarouselView'
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'TagListView'
 use_frameworks!
 end
